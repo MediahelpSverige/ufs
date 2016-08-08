@@ -24,6 +24,8 @@ define('DB_PASSWORD', '');
 /** MySQL hostname */
 define('DB_HOST', '');
 
+$table_prefix  = 'wp_';
+
 
 
 /**

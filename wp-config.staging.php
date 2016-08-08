@@ -24,6 +24,9 @@ define('DB_PASSWORD', 'steel1992');
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
 
+$table_prefix  = 'wp_';
+
+
 
 define('WP_HOME', 'http://ufs.mediahelpcrm.se/');
 
