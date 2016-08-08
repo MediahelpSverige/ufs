@@ -1,0 +1,60 @@
+local:
+  vhost: "http://localhost:8080/"
+  wordpress_path: "D:/Xampp/htdocs/ufs" # use an absolute path here
+
+  database:
+    name: "ufs"
+    user: " root@localhost"
+    password: "steel1992"
+    host: "127.0.0.1"
+
+production:
+  vhost: "http://ufs.reklamtvcity.se/"
+  wordpress_path: "/var/www/ufs.reklamtvcity.se" # use an absolute path here
+
+  database:
+    name: "180958-ufs"
+    user: "180958_tm59364"
+    password: "steel1992"
+    host: "ufs-180958.mysql.binero.se"
+    # port: "3308" # Use just in case you have exotic server config
+    # mysqldump_options: "--max_allowed_packet=1G" # Only available if using SSH
+
+  exclude:
+    - ".git/"
+    - ".gitignore"
+    - ".sass-cache/"
+    - "node_modules/"
+    - "bin/"
+    - "tmp/*"
+    - "Gemfile*"
+    - "Movefile"
+    - "wp-config.php"
+    - "wp-content/*.sql"
+
+  # paths: # you can customize wordpress internal paths
+  #   wp_content: "wp-content"
+  #   uploads: "wp-content/uploads"
+  #   plugins: "wp-content/plugins"
+  #   mu_plugins: "wp-content/mu-plugins"
+  #   themes: "wp-content/themes"
+  #   languages: "wp-content/languages"
+
+ssh:
+  host: "ssh.binero.se"
+  user: "180958_johan"
+  password: "Steel1992"
+  #   port: 22 # Port is optional
+  #   rsync_options: "--verbose" # Additional rsync options, optional
+  #   gateway: # Gateway is optional
+  #     host: "host"
+  #     user: "user"
+  #     password: "password" # password is optional, will use public keys if available.
+
+  # ftp:
+  #   user: "user"
+  #   password: "password"
+  #   host: "host"
+  #   passive: true
+  #   scheme: "ftps" # default "ftp"
+

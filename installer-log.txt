@@ -1,0 +1,183 @@
+********************************************************************************
+DUPLICATOR INSTALL-LOG
+STEP1 START @ 04:35:30
+NOTICE: Do NOT post to public sites or forums
+********************************************************************************
+VERSION:	1.1.12
+PHP:		5.5.35 | SAPI: apache2handler
+SERVER:		Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.5.35
+DOC ROOT:	D:/Xampp/htdocs/ufs
+DOC ROOT 755:	true
+LOG FILE 644:	true
+BUILD NAME:	20160629_ufs_57751f6ce19126084160630133228
+REQUEST URL:	http://localhost/ufs/installer.php
+
+********************************************************************************
+ARCHIVE SETUP
+********************************************************************************
+NAME:	20160629_ufs_57751f6ce19126084160630133228_archive.zip
+SIZE:	143.6MB
+ZIP:	Enabled (ZipArchive Support)
+EXTRACTING
+ZipArchive Object
+(
+    [status] => 0
+    [statusSys] => 0
+    [numFiles] => 4584
+    [filename] => D:\Xampp\htdocs\ufs\20160629_ufs_57751f6ce19126084160630133228_archive.zip
+    [comment] => 
+)
+COMPLETE: true
+
+WEB SERVER CONFIGURATION FILE RESET:
+- Backup of .htaccess/web.config made to .orig
+- Reset of .htaccess/web.config files
+
+UPDATED FILES:
+- SQL FILE:  'D:/Xampp/htdocs/ufs/installer-data.sql'
+- WP-CONFIG: 'D:/Xampp/htdocs/ufs/wp-config.php'
+
+ARCHIVE RUNTIME: 4.0775 sec.
+
+
+********************************************************************************
+DATABASE-ROUTINES
+********************************************************************************
+--------------------------------------
+SERVER ENVIROMENT
+--------------------------------------
+MYSQL VERSION:	This Server: 5.5.5 -- Build Server: 5.5.50
+TIMEOUT:	5000
+MAXPACK:	1048576
+--------------------------------------
+DATABASE RESULTS
+--------------------------------------
+ERRORS FOUND:	0
+DROP TABLE:	removed (0) tables
+QUERIES RAN:	8663
+
+wp_commentmeta: (0)
+wp_comments: (1)
+wp_duplicator_packages: (1)
+wp_links: (0)
+wp_options: (236)
+wp_postmeta: (1038)
+wp_posts: (423)
+wp_term_relationships: (33)
+wp_term_taxonomy: (3)
+wp_termmeta: (0)
+wp_terms: (3)
+wp_usermeta: (45)
+wp_users: (2)
+wp_wfbadleechers: (0)
+wp_wfblockediplog: (0)
+wp_wfblocks: (0)
+wp_wfblocksadv: (0)
+wp_wfconfig: (125)
+wp_wfcrawlers: (7)
+wp_wffilemods: (4076)
+wp_wfhits: (1469)
+wp_wfhoover: (0)
+wp_wfissues: (9)
+wp_wfleechers: (49)
+wp_wflockedout: (0)
+wp_wflocs: (0)
+wp_wflogins: (14)
+wp_wfnet404s: (0)
+wp_wfreversecache: (5)
+wp_wfscanners: (6)
+wp_wfstatus: (1083)
+wp_wfthrottlelog: (0)
+wp_wfvulnscanners: (0)
+Removed '62' cache/transient rows
+
+SECTION RUNTIME: 23.2126 sec.
+
+********************************************************************************
+STEP1 COMPLETE @ 04:35:57 - TOTAL RUNTIME: 27.3275 sec.
+********************************************************************************
+
+
+
+********************************************************************************
+DUPLICATOR INSTALL-LOG
+STEP2 START @ 04:36:40
+NOTICE: Do not post to public sites or forums
+********************************************************************************
+CHARSET SERVER:	latin1
+CHARSET CLIENT:	 utf8 
+
+--------------------------------------
+SERIALIZER ENGINE
+[*] scan every column
+[~] scan only text columns
+[^] no searchable columns
+--------------------------------------
+wp_commentmeta^ (0)
+wp_comments~ (1)
+wp_duplicator_packages^ (0)
+wp_links^ (0)
+wp_options~ (172)
+wp_postmeta~ (1038)
+wp_posts~ (423)
+wp_term_relationships~ (33)
+wp_term_taxonomy~ (3)
+wp_termmeta^ (0)
+wp_terms~ (3)
+wp_usermeta~ (45)
+wp_users~ (2)
+wp_wfbadleechers^ (0)
+wp_wfblockediplog^ (0)
+wp_wfblocks^ (0)
+wp_wfblocksadv^ (0)
+wp_wfconfig~ (125)
+wp_wfcrawlers~ (7)
+wp_wffilemods~ (4076)
+wp_wfhits~ (1469)
+wp_wfhoover^ (0)
+wp_wfissues~ (9)
+wp_wfleechers~ (49)
+wp_wflockedout^ (0)
+wp_wflocs^ (0)
+wp_wflogins~ (14)
+wp_wfnet404s^ (0)
+wp_wfreversecache~ (5)
+wp_wfscanners~ (6)
+wp_wfstatus~ (1083)
+wp_wfthrottlelog^ (0)
+wp_wfvulnscanners^ (0)
+--------------------------------------
+Search1:	'http://ufs.mediahelp.se' 
+Change1:	'http://localhost:8080/ufs' 
+Search2:	'/home/luftvrme/public_html/ufs/' 
+Change2:	'D:/Xampp/htdocs/ufs/' 
+Search3:	'http:\/\/ufs.mediahelp.se' 
+Change3:	'http:\/\/localhost:8080\/ufs' 
+Search4:	'\/home\/luftvrme\/public_html\/ufs\/' 
+Change4:	'D:\/Xampp\/htdocs\/ufs\/' 
+Search5:	'%2Fhome%2Fluftvrme%2Fpublic_html%2Fufs%2F' 
+Change5:	'D%3A%2FXampp%2Fhtdocs%2Fufs%2F' 
+Search6:	'http%3A%2F%2Fufs.mediahelp.se' 
+Change6:	'http%3A%2F%2Flocalhost%3A8080%2Fufs' 
+Search7:	'\home\luftvrme\public_html\ufs' 
+Change7:	'D:/Xampp/htdocs/ufs' 
+SCANNED:	Tables:33 	|	 Rows:8563 	|	 Cells:63427 
+UPDATED:	Tables:3 	|	 Rows:1904 	|	 Cells:3024 
+ERRORS:		0 
+RUNTIME:	1.444000 sec
+
+********************************************************************************
+START FINAL CLEANUP: 04:36:41
+********************************************************************************
+UPDATE `wp_blogs` SET domain = 'localhost' WHERE domain = 'ufs.mediahelp.se'
+
+--------------------------------------
+NOTICES
+--------------------------------------
+WP-CONFIG NOTICE: The wp-config.php has one or more of the following values set [WP_CONTENT_DIR, WP_CONTENT_URL, WPCACHEHOME, COOKIE_DOMAIN, WP_SITEURL, WP_HOME, WP_TEMP_DIR].  Please validate these values are correct by opening the file and checking the values.
+
+WEB SERVER CONFIGURATION FILE BASIC SETUP:
+created basic .htaccess file.  If using IIS web.config this process will need to be done manually.
+********************************************************************************
+STEP 2 COMPLETE @ 04:36:41 - TOTAL RUNTIME: 1.6998 sec.
+********************************************************************************
