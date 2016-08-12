@@ -25,28 +25,32 @@ module.exports = function(grunt) {
 
 		sass: {
 			dev: {
+
 				options:{
 					outputStyle: 'expanded'
 
 				},
+
 				files: {
 					'css/style.css' : 'src/scss/application.scss'
 				}
 
 			},
 			build: {
+
 				options: {
 					outputStyle: 'compressed'
 				},
+
 				files: {
 
 					'css/style.css' : 'src/scss/application.scss'
 
 				}
 			}
-		}
+		},
 
-		watch: : {
+		watch: {
 			js: {
 				files: ['src/js/*.js'],
 				tasks: ['uglify:dev']
@@ -55,7 +59,7 @@ module.exports = function(grunt) {
 				files: ['src/scss/**/*.scss'],
 				tasks: ['sass:dev']
 			}
-		}
+		},
 
 	});
 
