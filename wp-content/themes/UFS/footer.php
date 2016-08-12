@@ -61,7 +61,7 @@
 </footer>
 
 <script src="<?php bloginfo( 'template_url' ); ?>/bower_components/lightbox2/dist/js/lightbox.min.js"></script>
-<script src="<?php bloginfo( 'template_url' ); ?>/js/custom.js" async></script>
+<script src="<?php bloginfo( 'template_url' ); ?>/js/custom.min.js" async></script>
 
 <?php wp_footer(); ?>
 
