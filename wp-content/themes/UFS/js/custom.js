@@ -1,5 +1,15 @@
 $(document).ready(function(){
 
+	console.log($('.nav-menu').offset())
+
+	var menuleft = ($('.nav-menu').offset());
+
+		console.log(menuleft.left);
+
+	var menuOrigin = menuleft.left;
+
+	var menuTopOrigin = menuleft.top;
+
 
 								$.fn.extend({
     animateCss: function (animationName) {
@@ -139,7 +149,7 @@ spaceBetween: 20,
 
 	var navlogo = $('#whitelogo');
 
-	console.log(wrapOffset);
+	console.log(offset.top);
 
 
 
@@ -147,6 +157,9 @@ spaceBetween: 20,
 if (w >995) {
 
 $(window).scroll(function(e){
+
+	console.log($('.sticky-bg').offset());
+
 
 	if (body[0].scrollTop > offset.top) {
 
@@ -157,8 +170,14 @@ $(window).scroll(function(e){
 
 		body.addClass('fixed-nav');
 
+
+/*
 		$('.header').css({
 			'margin-bottom':'50',
+		});
+*/
+		var stickyNav = $('.fixed-nav header .nav-menu').css({
+			left: menuOrigin
 		});
 
 		nav.height('50px');
@@ -166,6 +185,7 @@ $(window).scroll(function(e){
 
 		nav.css({
 			'margin-top': '0px'
+
 		})
 
 
