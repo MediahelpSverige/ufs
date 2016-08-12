@@ -13,7 +13,7 @@
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url')?>/bower_components/Swiper/dist/css/swiper.min.css"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="http://s.mlcdn.co/animate.css">
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/custom.css">
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/responsive.min.css"><!-- Latest compiled and minified JavaScript -->
+<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/responsive.css"><!-- Latest compiled and minified JavaScript -->
 <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
 <link rel="icon"  type="image/png" href="<?php bloginfo( 'template_url' ); ?>/img/icon.png">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -37,7 +37,9 @@
 
 <div class="right-header">	
 <div class="searchbar-wrap"><?php echo get_search_form(); ?></div>		
-<div class="phone-manil">			<ul>				<li><span><img src="<?php bloginfo('template_url');?>/img/mobile-icon-new.png" alt=""></span>018 - 14 15 40</li>				<li><a href="mailto:info@ufs.nu"><span><img src="<?php bloginfo('template_url');?>/img/msg.png" alt=""></span>info@ufs.se</a></li>			</ul>	</div>				<div class="menu-toggle-wrap">			<div class="navbar-toggle">				<span class="icon-bar"></span>				<span class="icon-bar"></span>				<span class="icon-bar"></span>			</div>			</div><!--<div class="tjanster"><div class="tjanst-desc"></div>	<div class="dropdown">  <button class="dropbtn"><h5>Jag behöver hjälp med.. </h5><i class="fa fa-angle-down"></i></button>  <div class="dropdown-content">    <a href="#">Utbildningar</a>    <a href="#">Affärsplan</a>    <a href="#">Investeringar</a>    <a href="#">Bokföring</a>    <a href="#">Årsbokslut</a>  </div></div></div>-->	
+<div class="phone-manil">			<ul>				<li><span><img src="<?php bloginfo('template_url');?>/img/mobile-icon-new.png" alt=""></span>018 - 14 15 40</li>				<li><a href="mailto:info@ufs.nu"><span><img src="<?php bloginfo('template_url');?>/img/msg.png" alt=""></span>info@ufs.se</a></li>			</ul>	</div>	
+
+<div class="clearflix"></div>			<div class="menu-toggle-wrap">			<div class="navbar-toggle">				<span class="icon-bar"></span>				<span class="icon-bar"></span>				<span class="icon-bar"></span>			</div>			</div><!--<div class="tjanster"><div class="tjanst-desc"></div>	<div class="dropdown">  <button class="dropbtn"><h5>Jag behöver hjälp med.. </h5><i class="fa fa-angle-down"></i></button>  <div class="dropdown-content">    <a href="#">Utbildningar</a>    <a href="#">Affärsplan</a>    <a href="#">Investeringar</a>    <a href="#">Bokföring</a>    <a href="#">Årsbokslut</a>  </div></div></div>-->	
 <div class="menu-wrap">
 <div class="sticky-bg"><img id="whitelogo" src="http://ufs.mediahelp.se/wp-content/uploads/2016/06/ufs-white.png"></div><div class="nav-menu">
 <nav><?php wp_nav_menu( array( 'theme_location' => 'main_nav', 'menu_class' => 'navbar-nav navbar-right','container_class' => 'menu-main-menu-container') ); ?>	</nav><div class="clearfix"></div></div><div class="clearfix"></div></div></div>	</div>		</div></header>

@@ -660,6 +660,8 @@ padding:20px 15px;
     .welcome-wrap .col-md-2{
         /* padding: 0 5px; */
         width: 20%;
+        float: left;
+        /* padding: 0px; */
     }
     .welcome-wrap {
     /* margin-bottom: 120px; */
@@ -2348,6 +2350,9 @@ padding:20px 15px;
     float: left;
     display: block;
     margin-right: 20px;
+    /* width: 100%; */
+    max-width: 300px;
+    height: auto;
     }
     .personal-item:nth-child(even) .personal-item-wrap{
     float: left;
@@ -2483,7 +2488,7 @@ padding:20px 15px;
     padding: 0 0 5px;
     }
     .logo {
-    float: left;
+    /* float: left; */
     /* padding: 10px; */
     /* margin-bottom: 40px; */
     }
@@ -2708,7 +2713,7 @@ padding:20px 15px;
     }
     .phone-manil ul li {
     display: inline-block;
-    padding: 10px 20px 10px 65px;
+    padding: 10px 20px 10px 59px;
     margin: 0 0 0 15px;
     background: #f2f1f1;
     border-radius: 4px;
@@ -3547,7 +3552,7 @@ padding:20px 15px;
             font-weight: 300;
             text-align: left;
             padding-bottom: 10px;
-            text-shadow: 2px 2px 5px black;
+            text-shadow: 2px 2px 1px #272727;
             letter-spacing: initial;
             font-weight: bold;
             /* border-bottom: 2px solid red; */
@@ -3597,6 +3602,7 @@ padding:20px 15px;
     section.section-white.single img {
     display: block;
     /* float: left;*/
+    /* max-width: 700px; */
     margin-right: 10px;
     }
     img.alignleft{
