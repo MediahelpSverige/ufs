@@ -3771,3 +3771,7 @@ height: 50px;
     opacity: 0;
     z-index: 10;
 }
+
+.lightbox{
+    top: 200px !important;
+}

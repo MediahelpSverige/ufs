@@ -11,7 +11,7 @@
 <!--Custom stylesheet--><link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/bootstrap.min.css">
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/style.min.css"><!-- Optional theme -->
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url')?>/bower_components/Swiper/dist/css/swiper.min.css"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-<link rel="stylesheet" href="http://s.mlcdn.co/animate.css">
+<link rel="stylesheet" href="<?php bloginfo('template_url')?>/bower_components/animate.css/animate.min.css">
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/custom.min.css">
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/responsive.min.css"><!-- Latest compiled and minified JavaScript -->
 <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->

@@ -18,7 +18,7 @@ module.exports = function(grunt) {
 					preserveComments: true
 				},
 				src: 'src/js/*.js',
-				dest: 'js/script.min.js'
+				dest: 'js/script.js'
 			}
 
 		},
