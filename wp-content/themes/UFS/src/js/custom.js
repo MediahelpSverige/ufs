@@ -118,16 +118,14 @@ spaceBetween: 20,
 
 
 	onSlideChangeStart: function(swiper) {
-	
-	$('.banner-text-box').css({
-			display: "none",
-		});
-	},
-	onSlideChangeEnd: function(swiper) {
-		$('.banner-text').animateCss('fadeInUp');
+
+			$('.banner-text').animateCss('fadeInUp');
 		$('.banner-text').css({
 			display: "block",
 		})
+	},
+	onSlideChangeEnd: function(swiper) {
+
 	}
 
 	})
