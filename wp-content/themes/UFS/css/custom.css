@@ -606,6 +606,8 @@ button#searchsubmit {
 
 .single h3 {
     margin: 15px 0px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .searchbar i {
