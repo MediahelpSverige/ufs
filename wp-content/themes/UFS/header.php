@@ -31,7 +31,7 @@
 <header class="header"><div class="container">
 <div class="header-outer"><div class="left-header">
 
-<div class="logo">	<a href="http://ufs.mediahelp.se/">
+<div class="logo">	<a href="<?php bloginfo('url'); ?>">
 
 <img src="<?php echo esc_url( get_theme_mod( 'themeslug_logo' ) ); ?>"></a>	</div></div>	
 
