@@ -1,8 +1,9 @@
 <script type="text/javascript" src="<?php bloginfo('template_url');?>/bower_components/Swiper/dist/js/swiper.min.js"></script>
 
-<footer>
 
-	<!--<div class="nav-menu footer"><div class="container"><?php wp_nav_menu( array( 'theme_location' => 'footer_nav', 'menu_class' => 'navbar-footer','container_class' => 'footer-menu-container') ); ?></div></div>-->
+
+<div class="container">
+<footer>
 
 	<div class="bottom-footer">
 
@@ -57,9 +58,11 @@
 		</div>
 
 	</div>
+	</footer>
+	</div>
 
 	
-</footer>
+
 
 
 <script src="<?php bloginfo( 'template_url' ); ?>/js/script.min.js" async></script>
