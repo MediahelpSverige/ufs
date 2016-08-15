@@ -18,7 +18,7 @@ module.exports = function(grunt) {
 					preserveComments: true
 				},
 				src: 'src/js/*.js',
-				dest: 'js/script.js'
+				dest: 'js/script.min.js'
 			}
 
 		},
@@ -50,6 +50,22 @@ module.exports = function(grunt) {
 			}
 		},
 
+
+		cssmin: {
+
+			dev:{
+			  target: {
+			    files: [{
+			            expand: true,
+					    cwd: 'css',
+					    src: ['*.css', '!*.min.css'],
+					    dest: 'css',
+					    ext: '.min.css'
+			    }]
+			  }
+			}
+		},
+
 		watch: {
 			js: {
 				files: ['src/js/*.js'],
@@ -67,12 +83,13 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
 
 
 	//Register tastks
 
-	grunt.registerTask('default', ['uglify:dev','sass:dev']);
-	grunt.registerTask('build', ['uglify:build', 'sass:build']);
+	grunt.registerTask('default', ['uglify:dev','sass:dev', 'cssmin:dev']);
+	grunt.registerTask('build', ['uglify:build', 'sass:build', 'cssmin:dev']);
 
 
 };

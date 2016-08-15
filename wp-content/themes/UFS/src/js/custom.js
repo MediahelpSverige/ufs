@@ -116,6 +116,19 @@ spaceBetween: 10
 
 spaceBetween: 20,
 
+breakpoints: {
+
+
+	550:{
+		slidesPerView:1
+
+	}
+
+
+
+
+},
+
 
 	onSlideChangeStart: function(swiper) {
 
@@ -152,7 +165,7 @@ spaceBetween: 20,
 
 
 
-if (w >995) {
+if (w > 995) {
 
 $(window).scroll(function(e){
 
@@ -273,6 +286,8 @@ $(submenu).first().slideToggle();
 });
 }
 $('.navbar-toggle').click(function(){
-$('#menu-primary-menu').slideToggle();
+$('#menu-primary-menu').slideToggle(400,function(){
+});
+
 });
 });
