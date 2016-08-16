@@ -128,6 +128,20 @@
 
 }
 
+@media (max-width: 1200px){
+
+     .menu-item-has-children {
+
+        width: 100px;
+
+    }
+
+    nav li.menu-item-has-children>a{
+        background-position: 77px 15px;
+        background-size: 20px;
+    }
+}
+
 
 
 @media (max-width: 995px) {
