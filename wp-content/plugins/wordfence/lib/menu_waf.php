@@ -2,6 +2,7 @@
 $waf = wfWAF::getInstance();
 $config = $waf->getStorageEngine();
 $wafConfigURL = network_admin_url('admin.php?page=WordfenceWAF&wafAction=configureAutoPrepend');
+$wafRemoveURL = network_admin_url('admin.php?page=WordfenceWAF&wafAction=removeAutoPrepend');
 /** @var array $wafData */
 ?>
 <div class="wrap" id="paidWrap">
@@ -47,9 +48,15 @@ $wafConfigURL = network_admin_url('admin.php?page=WordfenceWAF&wafAction=configu
 	<?php elseif (!empty($wafActionContent)): ?>
 		<?php echo $wafActionContent ?>
 
-		<p class="wf-notice"><em>If you cannot complete the setup process,
+		<?php if (!empty($_REQUEST['wafAction']) && $_REQUEST['wafAction'] == 'removeAutoPrepend'): ?>
+			<p class="wf-notice"><em>If you cannot complete the uninstallation process,
+					<a target="_blank" href="https://docs.wordfence.com/en/Web_Application_Firewall_FAQ#How_can_I_remove_the_firewall_setup_manually.3F">click here for
+						help</a>.</em></p>
+		<?php else: ?>
+			<p class="wf-notice"><em>If you cannot complete the setup process,
 				<a target="_blank" href="https://docs.wordfence.com/en/Web_Application_Firewall_Setup">click here for
 					help</a>.</em></p>
+		<?php endif ?>
 
 	<?php else: ?>
 
@@ -67,7 +74,7 @@ $wafConfigURL = network_admin_url('admin.php?page=WordfenceWAF&wafAction=configu
 					Premium version of the Threat Defense Feed is updated in real-time protecting you immediately. As a
 					free user <strong>you are receiving the community version</strong> of the feed which is updated 30
 					days later.
-					Upgrade now for less than $5 a month!</p>
+					Upgrade now for just $8.25 per month!</p>
 
 				<p class="center"><a class="button button-primary"
 				                     href="https://www.wordfence.com/wafOptions1/wordfence-signup/">
@@ -246,6 +253,23 @@ $wafConfigURL = network_admin_url('admin.php?page=WordfenceWAF&wafAction=configu
 				</p>
 
 				<div id="waf-whitelisted-urls-wrapper"></div>
+				
+				<p id="whitelist-monitor">
+					<strong>Monitor Background Requests for False Positives:</strong><br>
+					<label><input type="checkbox" id="monitor-front" name="monitor-front" value="1"<?php echo wfConfig::get('ajaxWatcherDisabled_front') ? '' : ' checked'; ?>>Front</label> &nbsp; <label><input type="checkbox" id="monitor-admin" name="monitor-admin" value="1"<?php echo wfConfig::get('ajaxWatcherDisabled_admin') ? '' : ' checked'; ?>>Admin Panel</label>
+				</p> 
+				<br>
+				
+				<?php if (WFWAF_AUTO_PREPEND) : ?>
+				<h2>Advanced Configuration</h2>
+				
+				<p><strong>Remove Extended Protection<a href="https://docs.wordfence.com/en/Web_Application_Firewall_FAQ#How_can_I_remove_the_firewall_setup_manually.3F" target="_blank"
+										 class="wfhelp"></a></strong><br>
+				
+				<em>If you're moving to a new host or a new installation location, you may need to temporarily disable extended protection to avoid any file not found errors. Use this action to remove the configuration changes that enable extended protection mode or you can <a href="https://docs.wordfence.com/en/Web_Application_Firewall_FAQ#How_can_I_remove_the_firewall_setup_manually.3F" target="_blank">remove them manually</a>.</em></p>
+				
+				<p><a href="<?php echo $wafRemoveURL; ?>" class="button button-small" id="waf-remove-extended">Remove Extended Protection</a></p>
+				<?php endif ?>
 			</div>
 		<?php endif ?>
 	<?php endif ?>
@@ -348,15 +372,15 @@ $wafConfigURL = network_admin_url('admin.php?page=WordfenceWAF&wafAction=configu
 			</td>
 			<td>
 				<input name="replaceWhitelistedPath" type="hidden" value="${whitelistedURLParam.path}">
-				<span class="whitelist-display">${WFAD.base64_decode(whitelistedURLParam.path)}</span>
+				<span class="whitelist-display">${WFAD.htmlEscape(WFAD.base64_decode(whitelistedURLParam.path))}</span>
 				<input name="whitelistedPath" class="whitelist-edit whitelist-path" type="text"
-				       value="${WFAD.base64_decode(whitelistedURLParam.path)}">
+				       value="${WFAD.htmlEscape(WFAD.base64_decode(whitelistedURLParam.path))}">
 			</td>
 			<td>
 				<input name="replaceWhitelistedParam" type="hidden" value="${whitelistedURLParam.paramKey}">
-				<span class="whitelist-display">${WFAD.base64_decode(whitelistedURLParam.paramKey)}</span>
+				<span class="whitelist-display">${WFAD.htmlEscape(WFAD.base64_decode(whitelistedURLParam.paramKey))}</span>
 				<input name="whitelistedParam" class="whitelist-edit whitelist-param-key"
-				       type="text" value="${WFAD.base64_decode(whitelistedURLParam.paramKey)}">
+				       type="text" value="${WFAD.htmlEscape(WFAD.base64_decode(whitelistedURLParam.paramKey))}">
 			</td>
 			<td>
 				{{if (whitelistedURLParam.data.timestamp)}}
@@ -598,10 +622,13 @@ $wafConfigURL = network_admin_url('admin.php?page=WordfenceWAF&wafAction=configu
 					if (this.checked) {
 						var tr = $(this).closest('tr');
 						if (tr.is(':visible')) {
-							var path = tr.find('input[name=whitelistedPath]').val();
-							var paramKey = tr.find('input[name=whitelistedParam]').val();
-							var enabled = tr.find('input[name=whitelistedEnabled]').attr('checked') ? 1 : 0;
-							data.push([encodeURIComponent(path), encodeURIComponent(paramKey), enabled]);
+							var index = tr.attr('data-index');
+							if (index in WFAD.wafData.whitelistedURLParams) {
+								var path = WFAD.wafData.whitelistedURLParams[index].path;
+								var paramKey = WFAD.wafData.whitelistedURLParams[index].paramKey;
+								var enabled = tr.find('input[name=whitelistedEnabled]').attr('checked') ? 1 : 0;
+								data.push([path, paramKey, enabled]);
+							}
 						}
 					}
 				});
@@ -633,16 +660,19 @@ $wafConfigURL = network_admin_url('admin.php?page=WordfenceWAF&wafAction=configu
 		$(document).on('click', '.whitelist-url-delete', function() {
 			if (confirm('Are you sure you\'d like to delete this URL?')) {
 				var tr = $(this).closest('tr');
+				var index = tr.attr('data-index');
 
-				var pathInput = tr.find('input.whitelist-path');
-				var paramInput = tr.find('input.whitelist-param-key');
-				WFAD.wafConfigSave('deleteWhitelist', {
-					deletedWhitelistedPath: pathInput.val(),
-					deletedWhitelistedParam: paramInput.val()
-				}, function() {
-					WFAD.colorbox('400px', 'Firewall Configuration', 'The Wordfence Web Application Firewall ' +
-						'whitelist was saved successfully.');
-				}, false);
+				if (index in WFAD.wafData.whitelistedURLParams) {
+					var path = WFAD.wafData.whitelistedURLParams[index].path;
+					var param = WFAD.wafData.whitelistedURLParams[index].paramKey;
+					WFAD.wafConfigSave('deleteWhitelist', {
+						deletedWhitelistedPath: path,
+						deletedWhitelistedParam: param
+					}, function() {
+						WFAD.colorbox('400px', 'Firewall Configuration', 'The Wordfence Web Application Firewall ' +
+							'whitelist was saved successfully.');
+					}, false);
+				}
 			}
 		});
 		$(document).on('click', '.whitelist-url-save', function() {
@@ -697,7 +727,16 @@ $wafConfigURL = network_admin_url('admin.php?page=WordfenceWAF&wafAction=configu
 				ruleEnabled: enabled
 			});
 		});
-
+		
+		$('#monitor-front').on('click', function() {
+			var disabled = this.checked ? 0 : 1;
+			WFAD.updateConfig('ajaxWatcherDisabled_front', disabled);
+		})
+		
+		$('#monitor-admin').on('click', function() {
+			var disabled = this.checked ? 0 : 1;
+			WFAD.updateConfig('ajaxWatcherDisabled_admin', disabled); 
+		})
 	})(jQuery);
 </script>
 
