@@ -131,7 +131,7 @@ get_header();
 									</div>
 									<div class="col-md-2">
 										<a href="<?php bloginfo('url')?>/fastighetsjour">
-											<div class="service-wrap" style="background-image:url('<?php bloginfo('url') ?>/wp-content/uploads/2016/04/brandkår.jpg')">
+											<div class="service-wrap" style="background-image:url('<?php bloginfo('url') ?>/wp-content/uploads/2016/08/brandkar.jpg')">
 												<div class="image-wrap">
 													<img src="http://ufs.mediahelpcrm.se/wp-content/uploads/2016/06/ufs_jour.png">
 												</div>
