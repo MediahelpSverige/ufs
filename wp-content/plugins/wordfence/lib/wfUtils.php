@@ -8,7 +8,8 @@ class wfUtils {
 	private static $lastDisplayErrors = false;
 	public static function patternToRegex($pattern, $mod = 'i', $sep = '/') {
 		$pattern = preg_quote(trim($pattern), $sep);
-		return $sep . str_replace("\\*", '.*', $pattern) . $sep . $mod;
+		$pattern = str_replace(' ', '\s', $pattern);
+		return $sep . '^' . str_replace('\*', '.*', $pattern) . '$' . $sep . $mod;
 	}
 	public static function makeTimeAgo($secs, $noSeconds = false) {
 		if($secs < 1){
@@ -274,8 +275,8 @@ class wfUtils {
 		}
 
 		// IPv4 mapped IPv6
-		if (preg_match('/^((?:0{1,4}(?::|)){0,5})(::)?ffff:((?:\d{1,3}(?:\.|$)){4})$/i', $ip, $matches)) {
-			$octets = explode('.', $matches[3]);
+		if (preg_match('/^(?:\:(?:\:0{1,4}){0,4}\:|(?:0{1,4}\:){5})ffff\:(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})$/i', $ip, $matches)) {
+			$octets = explode('.', $matches[1]);
 			return "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff" . chr($octets[0]) . chr($octets[1]) . chr($octets[2]) . chr($octets[3]);
 		}
 
@@ -347,7 +348,7 @@ class wfUtils {
 		if(isset($_COOKIE)){
 			if(is_array($_COOKIE)){
 				foreach($_COOKIE as $key => $val){
-					if(strpos($key, 'wordpress_logged_in') == 0){
+					if(strpos($key, 'wordpress_logged_in') === 0){
 						return true;
 					}
 				}
@@ -512,6 +513,10 @@ class wfUtils {
 						$j = preg_replace('/:\d+$/', '', $j); //Strip off port
 					}
 					if (self::isValidIP($j)) {
+						if (self::isIPv6MappedIPv4($j)) {
+							$j = self::inet_ntop(self::inet_pton($j));
+						}
+
 						if (self::isPrivateAddress($j)) {
 							$privates[] = array($j, $var);
 						} else {
@@ -530,6 +535,10 @@ class wfUtils {
 							$j = preg_replace('/:\d+$/', '', $j); //Strip off port
 						}
 						if(self::isValidIP($j)){
+							if (self::isIPv6MappedIPv4($j)) {
+								$j = self::inet_ntop(self::inet_pton($j));
+							}
+
 							if(self::isPrivateAddress($j)){
 								$privates[] = array($j, $var);
 							} else {
@@ -547,6 +556,10 @@ class wfUtils {
 				$item = preg_replace('/:\d+$/', '', $item); //Strip off port
 			}
 			if(self::isValidIP($item)){
+				if (self::isIPv6MappedIPv4($item)) {
+					$item = self::inet_ntop(self::inet_pton($item));
+				}
+
 				if(self::isPrivateAddress($item)){
 					$privates[] = array($item, $var);
 				} else {
@@ -560,6 +573,15 @@ class wfUtils {
 			return false;
 		}
 	}
+
+	/**
+	 * @param string $ip
+	 * @return bool
+	 */
+	public static function isIPv6MappedIPv4($ip) {
+		return preg_match('/^(?:\:(?:\:0{1,4}){0,4}\:|(?:0{1,4}\:){5})ffff\:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/i', $ip) > 0;
+	}
+
 	public static function extractHostname($str){
 		if(preg_match('/https?:\/\/([a-zA-Z0-9\.\-]+)(?:\/|$)/i', $str, $matches)){
 			return strtolower($matches[1]);
@@ -612,14 +634,17 @@ class wfUtils {
 	public static function isValidIP($IP){
 		return filter_var($IP, FILTER_VALIDATE_IP) !== false;
 	}
-	public static function getRequestedURL(){
-		if(isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST']){
+	public static function getRequestedURL() {
+		if (isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST']) {
 			$host = $_SERVER['HTTP_HOST'];
-		} else {
+		} else if (isset($_SERVER['SERVER_NAME']) && $_SERVER['SERVER_NAME']) {
 			$host = $_SERVER['SERVER_NAME'];
 		}
+		else {
+			return null;
+		}
 		$prefix = 'http';
-		if( isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] ){
+		if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']) {
 			$prefix = 'https';
 		}
 		return $prefix . '://' . $host . $_SERVER['REQUEST_URI'];
@@ -986,10 +1011,11 @@ class wfUtils {
 		if(! (function_exists('geoip_open') && function_exists('geoip_country_code_by_addr') && function_exists('geoip_country_code_by_addr_v6'))){
 			require_once('wfGeoIP.php');
 		}
-		$gi = geoip_open(dirname(__FILE__) . "/GeoIP.dat",GEOIP_STANDARD);
 		if (filter_var($IP, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6) !== false) {
+			$gi = geoip_open(dirname(__FILE__) . "/GeoIPv6.dat", GEOIP_STANDARD);
 			$country = geoip_country_code_by_addr_v6($gi, $IP);
 		} else {
+			$gi = geoip_open(dirname(__FILE__) . "/GeoIP.dat", GEOIP_STANDARD);
 			$country = geoip_country_code_by_addr($gi, $IP);
 		}
 		geoip_close($gi);
@@ -1139,7 +1165,7 @@ class wfUtils {
 			return gethostbynamel($host);
 		}
 
-		$ips = array_merge((array) dns_get_record($host, DNS_AAAA), (array) dns_get_record($host, DNS_A));
+		$ips = array_merge((array) @dns_get_record($host, DNS_AAAA), (array) @dns_get_record($host, DNS_A));
 		$return = array();
 
 		foreach ($ips as $record) {
@@ -1249,7 +1275,6 @@ class wfUtils {
 		$keys[$index] = $newKey;
 		return array_combine($keys, array_values($array));
 	}
-
 }
 
 // GeoIP lib uses these as well

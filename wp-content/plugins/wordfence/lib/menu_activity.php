@@ -31,14 +31,11 @@
 		</table>
 	</div>
 	<div class="wordfenceWrap">
-
 		<?php if (!wfConfig::liveTrafficEnabled()): ?>
-			<div style="color: #F00;">
-				Live Traffic is disabled.
-				<?php if (wfConfig::get('cacheType') == 'falcon') { ?>This is done to improve performance because you have Wordfence Falcon Engine enabled.<?php } ?>
-			</div>
-		<?php else: ?>
-			<div id="wf-live-traffic" class="wfTabsContainer">
+			<div id="wordfenceLiveActivityDisabled"><p><strong>Live activity is disabled.</strong> <?php if (wfConfig::get('cacheType') == 'falcon') { ?>This is done to improve performance because you have Wordfence Falcon Engine enabled.<?php } ?> Login and firewall activity will still appear below.</p></div>
+		<?php endif ?>
+		
+		<div id="wf-live-traffic" class="wfTabsContainer">
 
 				<div id="wf-live-traffic-legend">
 					<ul>
@@ -51,7 +48,7 @@
 
 				<form data-bind="submit: reloadListings">
 
-					<?php if (defined('WP_DEBUG') && WP_DEBUG): ?>
+					<?php if (defined('WP_DEBUG') && WP_DEBUG && false): ?>
 						<pre data-bind="text: 'DEBUG: ' + sql(), visible: sql"></pre>
 					<?php endif ?>
 
@@ -188,7 +185,7 @@
 					<tr>
 						<td>
 							<div data-bind="if: loc()">
-								<img data-bind="attr: { src: '//www.wordfence.com/images/flags/' + loc().countryCode.toLowerCase() + '.png',
+								<img data-bind="attr: { src: '<?php echo wfUtils::getBaseURL() . 'images/flags/'; ?>' + loc().countryCode.toLowerCase() + '.png',
 											alt: loc().countryName, title: loc().countryName }" width="16" height="11"
 								     class="wfFlag"/>
 								<a data-bind="text: (loc().city ? loc().city + ', ' : '') + loc().countryName,
@@ -243,7 +240,7 @@
 										</span>
 										<span data-bind="if: loc()">
 											<span data-bind="if: action() != 'loginOK' && user()"> in</span>
-											<img data-bind="attr: { src: '//www.wordfence.com/images/flags/' + loc().countryCode.toLowerCase() + '.png',
+											<img data-bind="attr: { src: '<?php echo wfUtils::getBaseURL() . 'images/flags/'; ?>' + loc().countryCode.toLowerCase() + '.png',
 												alt: loc().countryName, title: loc().countryName }" width="16"
 											     height="11"
 											     class="wfFlag"/>
@@ -393,7 +390,6 @@
 					No events to report yet.
 				</div>
 			</div>
-		<?php endif ?>
 	</div>
 </div>
 

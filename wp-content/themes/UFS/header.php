@@ -41,5 +41,5 @@
 
 <div class="clearflix"></div>			<div class="menu-toggle-wrap">			<div class="navbar-toggle">				<span class="icon-bar"></span>				<span class="icon-bar"></span>				<span class="icon-bar"></span>			</div>			</div><!--<div class="tjanster"><div class="tjanst-desc"></div>	<div class="dropdown">  <button class="dropbtn"><h5>Jag behöver hjälp med.. </h5><i class="fa fa-angle-down"></i></button>  <div class="dropdown-content">    <a href="#">Utbildningar</a>    <a href="#">Affärsplan</a>    <a href="#">Investeringar</a>    <a href="#">Bokföring</a>    <a href="#">Årsbokslut</a>  </div></div></div>-->	
 <div class="menu-wrap">
-<div class="sticky-bg"><img id="whitelogo" src="http://ufs.mediahelp.se/wp-content/uploads/2016/06/ufs-white.png"></div><div class="nav-menu">
+<div class="sticky-bg"><img id="whitelogo" src="<?php bloginfo('url');?>/wp-content/uploads/2016/06/ufs-white.png"></div><div class="nav-menu">
 <nav><?php wp_nav_menu( array( 'theme_location' => 'main_nav', 'menu_class' => 'navbar-nav navbar-right','container_class' => 'menu-main-menu-container') ); ?>	</nav><div class="clearfix"></div></div><div class="clearfix"></div></div></div>	</div>		</div></header>
