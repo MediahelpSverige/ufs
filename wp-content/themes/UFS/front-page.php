@@ -43,7 +43,6 @@ get_header();
 				<?php wp_reset_postdata(); ?>
 			</div>
 		</div>
-		<div class="swiper-pagination"></div>
 		<div class="swiper-button-prev"></div>
 		<div class="swiper-button-next"></div>
 	</div>

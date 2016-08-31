@@ -12,12 +12,12 @@
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/style.min.css"><!-- Optional theme -->
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url')?>/bower_components/Swiper/dist/css/swiper.min.css"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="<?php bloginfo('template_url')?>/bower_components/animate.css/animate.min.css">
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/custom.min.css">
+<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/custom.css">
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/responsive.min.css"><!-- Latest compiled and minified JavaScript -->
 <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
 <link rel="icon"  type="image/png" href="<?php bloginfo( 'template_url' ); ?>/img/icon.png">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700|Montserrat' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url')?>/bower_components/lightbox2/dist/css/lightbox.min.css">
 
 <?php wp_head(); ?>
