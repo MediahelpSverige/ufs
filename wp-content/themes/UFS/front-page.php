@@ -48,6 +48,17 @@ get_header();
 	</div>
 	</div>
 </section>
+<div class="row">
+	
+
+	<div class="col-md-12" id="intro-text">
+				<p class="small-title">Välkommen till UFS!</p>
+				<p>Vi erbjuder sedan 1996 helhetslösningar inom ett flertal tjänsteområden som du kan läsa om nedan.</p>
+		
+
+	</div>
+
+</div>
 <section class="welcome-section">
 	<div class="container">
 
@@ -60,8 +71,90 @@ get_header();
 
 		<div class="border-wrap">
 
+		<h4 class="small-title">Våra tjänster</h4>
+		<div class="row">
+						<div class="col-md-6 col-sm-6">
+							<a href="<?php bloginfo('url')?>/tjanster/byggservice-2/">
+								<div class="service-wrap" style="background-image:url('<?php bloginfo('url');?>/wp-content/uploads/2016/04/bygg-e1467271972766.jpg')">
+									<div class="image-wrap">
+										<img src="http://ufs.mediahelpcrm.se/wp-content/uploads/2016/06/ufs_byggservice-1.png">
+									</div></div>
+								</a>
+							</div>
+							<div class="col-md-6 col-sm-6">
+								<a href="<?php bloginfo('url')?>/tjanster/fuktskador">
+									<div class="service-wrap" style="background-image:url('<?php bloginfo('url');?>/wp-content/uploads/2016/06/ref2_small.jpg')">
+										<div class="image-wrap">
+											<img src="http://ufs.mediahelpcrm.se/wp-content/uploads/2016/06/ufs_fukttektin-2.png">
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="col-md-6 col-sm-6">
+								<a href="<?php bloginfo('url')?>/tjanster/rivning-och-sanering">
+									<div class="service-wrap" style="background-image:url('<?php bloginfo('url') ?>/wp-content/uploads/2016/06/stationen.jpg')">
+										<div class="image-wrap">
+											<img src="http://ufs.mediahelpcrm.se/wp-content/uploads/2016/06/ufs_sanering-1.png">
+										</div></div>
+									</a>
+								</div>
+								<div class="col-md-6 col-sm-6">
+									<a href="<?php bloginfo('url')?>/tjanster/vvs-rormokare-i-uppsala">
+										<div class="service-wrap" style="background-image:url('<?php bloginfo('url') ?>/wp-content/uploads/2016/06/ror_small.jpg')">
+											<div class="image-wrap">
+												<img src="<?php bloginfo('url') ?>/wp-content/uploads/2016/06/ufs_rorservice-1.png">
+												
+											</div></div>
+										</a>
+									</div>
+									<div class="col-md-12 col-sm-12">
+										<a href="<?php bloginfo('url')?>/fastighetsjour">
+											<div class="service-wrap" style="background-image:url('<?php bloginfo('url') ?>/wp-content/uploads/2016/08/brandkar.jpg')">
+												<div class="image-wrap">
+													<img src="http://ufs.mediahelpcrm.se/wp-content/uploads/2016/06/ufs_jour.png">
+												</div>
+											</div>
+										</a>
+									</div>
+
+									<div class="clearfix"></div>
+									</div>
+
 		
-			<?php
+
+			<div class="welcome-imagess">
+				
+			</div>
+		</div>
+
+
+
+		</div>
+
+
+
+
+
+		<div id="facebook-sb" class="col-md-4 col-sm-4">
+		<div class="border-wrap">
+		<h4 class="small-title">Följ oss på facebook</h4>
+			<div class="facebook-wrap">
+				<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fwww.ufs.nu%2F%3Ffref%3Dts&tabs=timeline&width=330&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=911661125591162" width="330" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+			</div>
+			</div>
+			<div class="border-wrap">
+				<h4 class="small-title">UFS 20 år!</h4>
+				<img class="alignnone wp-image-474 size-full" style="display: block; margin: auto;" src="http://localhost:8080/ufs/wp-content/uploads/2016/03/ufs20logo.png" width="400" height="327" />
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		</div>
+<div class="row">
+	
+
+	<div class="col-md-12" id="intro-text">
+
+				<?php
 					if ( have_posts() ) {
 						while ( have_posts() ) {
 							the_post();
@@ -74,75 +167,11 @@ get_header();
 			} // end while
 			} // end if
 			?>
-			<div class="welcome-imagess">
-				
-			</div>
-		</div>
-		</div>
-		<div id="facebook-sb" class="col-md-4 col-sm-4">
-		<div class="border-wrap">
-		<h4 class="small-title">Följ oss på facebook</h4>
-			<div class="facebook-wrap">
-				<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fwww.ufs.nu%2F%3Ffref%3Dts&tabs=timeline&width=330&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=911661125591162" width="330" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-			</div>
-			</div>
-		</div>
-		<div class="clearfix"></div>
-		</div>
-					<div class="row">
-					<div class="col-md-12">
+		
 
-					<div class="border-wrap" id="service">
-					<h4 class="small-title">Våra tjänster</h4>
-						<div class="col-md-2">
-							<a href="<?php bloginfo('url')?>/tjanster/byggservice-2/">
-								<div class="service-wrap" style="background-image:url('<?php bloginfo('url');?>/wp-content/uploads/2016/04/bygg-e1467271972766.jpg')">
-									<div class="image-wrap">
-										<img src="http://ufs.mediahelpcrm.se/wp-content/uploads/2016/06/ufs_byggservice-1.png">
-									</div></div>
-								</a>
-							</div>
-							<div class="col-md-2">
-								<a href="<?php bloginfo('url')?>/tjanster/fuktskador">
-									<div class="service-wrap" style="background-image:url('<?php bloginfo('url');?>/wp-content/uploads/2016/06/ref2_small.jpg')">
-										<div class="image-wrap">
-											<img src="http://ufs.mediahelpcrm.se/wp-content/uploads/2016/06/ufs_fukttektin-2.png">
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="col-md-2">
-								<a href="<?php bloginfo('url')?>/tjanster/rivning-och-sanering">
-									<div class="service-wrap" style="background-image:url('<?php bloginfo('url') ?>/wp-content/uploads/2016/06/stationen.jpg')">
-										<div class="image-wrap">
-											<img src="http://ufs.mediahelpcrm.se/wp-content/uploads/2016/06/ufs_sanering-1.png">
-										</div></div>
-									</a>
-								</div>
-								<div class="col-md-2">
-									<a href="<?php bloginfo('url')?>/tjanster/vvs-rormokare-i-uppsala">
-										<div class="service-wrap" style="background-image:url('<?php bloginfo('url') ?>/wp-content/uploads/2016/06/ror_small.jpg')">
-											<div class="image-wrap">
-												<img src="<?php bloginfo('url') ?>/wp-content/uploads/2016/06/ufs_rorservice-1.png">
-												
-											</div></div>
-										</a>
-									</div>
-									<div class="col-md-2">
-										<a href="<?php bloginfo('url')?>/fastighetsjour">
-											<div class="service-wrap" style="background-image:url('<?php bloginfo('url') ?>/wp-content/uploads/2016/08/brandkar.jpg')">
-												<div class="image-wrap">
-													<img src="http://ufs.mediahelpcrm.se/wp-content/uploads/2016/06/ufs_jour.png">
-												</div>
-											</div>
-										</a>
-									</div>
+	</div>
 
-									<div class="clearfix"></div>
-
-									</div>
-								</div>
-						</div>
+</div>
 
 	</div>
 	</div>
