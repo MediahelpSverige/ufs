@@ -49,8 +49,6 @@
 
 				<li>Telefon	018-14 15 40</li>
 
-				<li>Svederusgatan 3	018-14 15 41</li>
-
 				<li>E-post	<a href="mailto:info@ufs.nu">info@ufs.nu</a></li>
 
 			</ul>

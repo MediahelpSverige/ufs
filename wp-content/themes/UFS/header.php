@@ -37,7 +37,7 @@
 
 <div class="right-header">	
 <div class="searchbar-wrap"><?php echo get_search_form(); ?></div>		
-<div class="phone-manil">			<ul>				<li><span><img src="<?php bloginfo('template_url');?>/img/mobile-icon-new.png" alt=""></span>018 - 14 15 40</li>				<li><a href="mailto:info@ufs.nu"><span><img src="<?php bloginfo('template_url');?>/img/msg.png" alt=""></span>info@ufs.se</a></li>			</ul>	</div>	
+<div class="phone-manil">			<ul>				<li><span><img src="<?php bloginfo('template_url');?>/img/mobile-icon-new.png" alt=""></span>018 - 14 15 40</li>				<li><a href="mailto:info@ufs.nu"><span><img src="<?php bloginfo('template_url');?>/img/msg.png" alt=""></span>info@ufs.nu</a></li>			</ul>	</div>	
 
 <div class="clearflix"></div>			<div class="menu-toggle-wrap">			<div class="navbar-toggle">				<span class="icon-bar"></span>				<span class="icon-bar"></span>				<span class="icon-bar"></span>			</div>			</div><!--<div class="tjanster"><div class="tjanst-desc"></div>	<div class="dropdown">  <button class="dropbtn"><h5>Jag behöver hjälp med.. </h5><i class="fa fa-angle-down"></i></button>  <div class="dropdown-content">    <a href="#">Utbildningar</a>    <a href="#">Affärsplan</a>    <a href="#">Investeringar</a>    <a href="#">Bokföring</a>    <a href="#">Årsbokslut</a>  </div></div></div>-->	
 <div class="menu-wrap">
