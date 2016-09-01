@@ -144,7 +144,7 @@ get_header();
 			</div>
 			<div class="border-wrap">
 				<h4 class="small-title">UFS 20 år!</h4>
-				<img class="alignnone wp-image-474 size-full" style="display: block; margin: auto;" src="http://localhost:8080/ufs/wp-content/uploads/2016/03/ufs20logo.png" width="400" height="327" />
+				<img class="alignnone wp-image-474 size-full" style="display: block; margin: auto;" src="<?php bloginfo('url');?>/wp-content/uploads/2016/03/ufs20logo.png" width="400" height="327" />
 			</div>
 		</div>
 		<div class="clearfix"></div>
