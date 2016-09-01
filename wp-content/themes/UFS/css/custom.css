@@ -4153,7 +4153,11 @@ h4 {
 #intro-text{
     text-align: center;
     margin-top: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
+}
+
+#intro-text .small-title{
+    font-size: 20px;
 }
 
 #intro-text p{
@@ -4790,7 +4794,7 @@ section.welcome-section {
     /* border-top: 2px solid #D12730; */
     /* overflow: auto; */
     /* background-color: white; */
-    padding-bottom: 40px;
+    padding-bottom: 30px;
     padding-top: 30px;
     /* background-color: white; */
 }
