@@ -887,10 +887,7 @@ button#searchsubmit {
     /* padding: 0px; */
 }
 
-.welcome-wrap .border-wrap img{
-max-width: 99%;
-height: auto;
-}
+.welcome-wrap .border-wrap img{max-width: 99%;height: auto;}
 
 .welcome-wrap {
     /* margin-bottom: 120px; */
@@ -3687,6 +3684,12 @@ section.page-content .item-wrap p {
     padding: 15px;
 }
 
+section.section-white.single .text-personal ul{
+    list-style: none;
+    margin: 3px 0px;
+    padding-left: 0px;
+}
+
 .text-personal a {
     color: #d12730;
 }
@@ -3750,7 +3753,7 @@ img.ajax-loader {
     background-color: white;
     border: 1px solid rgba(214, 214, 214, 0.48);
     /* border-top: 2px solid red; */
-    height: 450px;
+    height: 460px;
     box-shadow: 0px 1px 16px rgba(232, 232, 232, 0.71);
 }
 
@@ -4856,7 +4859,7 @@ section.welcome-section h3 {
 }
 
 .service-wrap img {
-    width: 56%;
+    width: 60%;
     display: block;
     margin: auto;
     opacity: 0.7;
@@ -5140,9 +5143,9 @@ section.welcome-section p:first-child {
 }
 
 section.section-white.single ul {
-    list-style: none;
     padding-left: inherit;
-    margin: 3px 0px;
+    list-style: initial;
+    margin: 25px 0px;
 }
 
 .image-wrap {
@@ -5157,8 +5160,8 @@ section.section-white.single ul {
 section.section-white.single ul li {
     padding: 15px 10px;
     font-size: 16px;
-    background-color: white;
-    border: 1px solid #DADADA;
+    /* background-color: white; */
+    /* border: 1px solid #DADADA; */
 }
 
 .section-white.single img {
@@ -5477,4 +5480,4 @@ header .container {}
 
 .lightbox {
     top: 200px !important;
-}
+ 
