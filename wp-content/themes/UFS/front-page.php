@@ -73,19 +73,21 @@ get_header();
 
 		<h4 class="small-title">Våra tjänster</h4>
 		<div class="row">
-						<div class="col-md-6 col-sm-6">
-							<a href="<?php bloginfo('url')?>/tjanster/byggservice-2/">
+						<div class="col-md-12 col-sm-12">
+								<a href="<?php bloginfo('url')?>/tjanster/byggservice-2/">
+
 								<div class="service-wrap" style="background-image:url('<?php bloginfo('url');?>/wp-content/uploads/2016/04/bygg-e1467271972766.jpg')">
 									<div class="image-wrap">
-										<img src="http://ufs.mediahelpcrm.se/wp-content/uploads/2016/06/ufs_byggservice-1.png">
+										<img src="http://ufs.mediahelpcrm.se/wp-content/uploads/2016/09/bygg.png">
 									</div></div>
 								</a>
-							</div>
+							
+						</div>
 							<div class="col-md-6 col-sm-6">
 								<a href="<?php bloginfo('url')?>/tjanster/fuktskador">
 									<div class="service-wrap" style="background-image:url('<?php bloginfo('url');?>/wp-content/uploads/2016/06/ref2_small.jpg')">
 										<div class="image-wrap">
-											<img src="http://ufs.mediahelpcrm.se/wp-content/uploads/2016/06/ufs_fukttektin-2.png">
+											<img src="http://ufs.mediahelpcrm.se/wp-content/uploads/2016/09/fuktt.png">
 										</div>
 									</div>
 								</a>
@@ -94,7 +96,7 @@ get_header();
 								<a href="<?php bloginfo('url')?>/tjanster/rivning-och-sanering">
 									<div class="service-wrap" style="background-image:url('<?php bloginfo('url') ?>/wp-content/uploads/2016/06/stationen.jpg')">
 										<div class="image-wrap">
-											<img src="http://ufs.mediahelpcrm.se/wp-content/uploads/2016/06/ufs_sanering-1.png">
+											<img src="http://ufs.mediahelpcrm.se/wp-content/uploads/2016/09/Asset-9.png">
 										</div></div>
 									</a>
 								</div>
@@ -102,20 +104,21 @@ get_header();
 									<a href="<?php bloginfo('url')?>/tjanster/vvs-rormokare-i-uppsala">
 										<div class="service-wrap" style="background-image:url('<?php bloginfo('url') ?>/wp-content/uploads/2016/06/ror_small.jpg')">
 											<div class="image-wrap">
-												<img src="<?php bloginfo('url') ?>/wp-content/uploads/2016/06/ufs_rorservice-1.png">
+												<img src="http://ufs.mediahelpcrm.se/wp-content/uploads/2016/09/Asset-4-1.png">
 												
 											</div></div>
 										</a>
 									</div>
-									<div class="col-md-12 col-sm-12">
-										<a href="<?php bloginfo('url')?>/fastighetsjour">
-											<div class="service-wrap" style="background-image:url('<?php bloginfo('url') ?>/wp-content/uploads/2016/08/brandkar.jpg')">
-												<div class="image-wrap">
-													<img src="http://ufs.mediahelpcrm.se/wp-content/uploads/2016/06/ufs_jour.png">
-												</div>
-											</div>
-										</a>
+															<div class="col-md-6 col-sm-6">
+							<a href="<?php bloginfo('url')?>/fastighetsjour">
+								<div class="service-wrap" style="background-image:url('<?php bloginfo('url') ?>/wp-content/uploads/2016/08/brandkar.jpg')">
+									<div class="image-wrap">
+										<img style="width:85%;" src="http://ufs.mediahelpcrm.se/wp-content/uploads/2016/09/jour-slim.png">
 									</div>
+								</div>
+							</a>
+							</div>
+
 
 									<div class="clearfix"></div>
 									</div>
