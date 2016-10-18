@@ -78,6 +78,11 @@ section {
     /* background-color: #f8f8f8; */
 }
 
+img{
+    max-width: 100%;
+    height: auto;
+}
+
 nav.main-nav {
     /* background-color: #0020B1; */
     overflow: auto;
@@ -229,7 +234,6 @@ input[type="submit"]:focus {
     /* border-top: 2px solid gray; */
     /* border-bottom: 2px solid gray; */
     z-index: 9999;
-    height: 51px;
     margin-top: 7px;
     /* width: 100%; */
     /* position: relative; */
@@ -4154,7 +4158,7 @@ h4 {
 }
 
 #intro-text{
-    text-align: center;
+    text-align: left;
     margin-top: 30px;
     margin-bottom: 0px;
 }
@@ -4164,7 +4168,7 @@ h4 {
 }
 
 #intro-text p{
-    font-size: 18px;
+    font-size: 15px;
     line-height: 26px;
 }
 
@@ -4226,15 +4230,14 @@ h4 {
 
 .navbar-nav > li > a {
     transition: 0.5s ease all;
-    font-size: 15px;
     color: #FFF;
     position: relative;
     /* width: 140px; */
-    font-size: 17px;
+    font-size: 16px;
     border-top: 2px solid;
     border-color: transparent;
     padding: 5px 10px;
-    padding: 13px 15px;
+    padding: 10px 15px;
 }
 
 .navbar-nav > li > a:hover,
@@ -5027,11 +5030,15 @@ footer .kontakt {
 }
 
 .title {
-    font-size: 51px;
+    font-size: 35px;
     text-transform: uppercase;
     letter-spacing: 3;
     line-height: initial;
     margin-bottom: 30px;
+    font-family: montserrat;
+    font-weight: bold;
+    text-align:left;
+    margin-top: 0px;
 }
 
 .title-wrap i {
