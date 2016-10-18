@@ -110,7 +110,7 @@ spaceBetween: 10
 
 	paginationClickable: true,
 
-	slidesPerView: 3,
+	slidesPerView: 1,
 
 	centeredSlides: true,
 
@@ -191,7 +191,6 @@ $(window).scroll(function(e){
 			left: menuOrigin
 		});
 
-		nav.height('50px');
 
 
 		nav.css({
@@ -217,7 +216,7 @@ $(window).scroll(function(e){
 	}else{
 
 		$('.navbar-nav li a').css({
-			'padding' : '13px 15px'
+			'padding' : '10px 15px'
 		})
 
 		nav.css({
@@ -237,7 +236,7 @@ $(window).scroll(function(e){
 			'margin-bottom':'0px',
 		});
 
-				nav.height('50px');
+		
 
 				//nav.width($('.right-header').width())
 	}

@@ -184,7 +184,7 @@ nav li li:last-child a {
 nav li.menu-item-has-children > a {
     background-image: url('../img/arrow-down.png');
     background-position: 93px 10px;
-    background-size: 30px;
+    background-size: 25px;
     background-repeat: no-repeat;
 }
 
@@ -234,7 +234,7 @@ input[type="submit"]:focus {
     /* border-top: 2px solid gray; */
     /* border-bottom: 2px solid gray; */
     z-index: 9999;
-    margin-top: 7px;
+    /* margin-top: 7px; */
     /* width: 100%; */
     /* position: relative; */
     transition: 0.5s ease all;
@@ -3825,11 +3825,11 @@ img.ajax-loader {
 div#partnerslider {
     margin: 10px 0px;
     /* width: 1400px; */
-    padding: 20px 20px;
+    /* padding: 20px 20px; */
     left: 0px;
     background-color: whitesmoke;
     right: 0px;
-    height: 250px;
+    height: 200px;
     /* box-shadow: 1px 1px 13px 1px #d0d0d0; */
     /* position: absolute; */
     /* background-color: #EFEFEF; */
@@ -3843,6 +3843,8 @@ div#partnerslider .swiper-container {
 div#partnerslider .swiper-slide {
     height: auto;
     background-color: white;
+    max-width: 100%;
+    max-height: 165px;
 }
 
 #homebanner .owl-controls.clickable {
@@ -3863,7 +3865,7 @@ div#partnerslider .swiper-slide {
     max-width: 100%;
     /* max-height: 150px; */
     /* min-height: 55px; */
-    max-height: 120px;
+    max-height: 110px;
     /* width: 60%; */
     z-index: 999;
     position: absolute;
@@ -4159,7 +4161,7 @@ h4 {
 
 #intro-text{
     text-align: left;
-    margin-top: 30px;
+    margin-top: 15px;
     margin-bottom: 0px;
 }
 
@@ -4253,7 +4255,7 @@ h4 {
     height: 16px;
     position: absolute;
     right: -1px;
-    top: 17px;
+    top: 15px;
     transform: rotate(15deg);
     width: 1px;
 }
@@ -4940,14 +4942,15 @@ section.welcome-section h3 {
 
 .service-wrap {
     /* padding: 50px 10px; */
-    height: 258px;
+    height: 135px;
     background-size: cover;
     background-position: center;
     background-color: black;
     position: relative;
     transition: 1s ease all;
     overflow: hidden;
-    margin: 15px 0px;
+    /* margin: 15px 0px; */
+    /* margin-top: 0px; */
 }
 
 .service-wrap img {
@@ -5030,15 +5033,17 @@ footer .kontakt {
 }
 
 .title {
-    font-size: 35px;
+    font-size: 30px;
     text-transform: uppercase;
-    letter-spacing: 3;
+    letter-spacing: 1px;
     line-height: initial;
     margin-bottom: 30px;
     font-family: montserrat;
     font-weight: bold;
     text-align:left;
     margin-top: 0px;
+    padding: 5px 5px;
+    color: black;
 }
 
 .title-wrap i {
@@ -5112,7 +5117,7 @@ strong.breadcrumb_last {
 
 .left-header {
     float: left;
-    width: 10%;
+    width: 15%;
 }
 
 .right-header {
@@ -5223,9 +5228,10 @@ h4.readmore {
 }
 
 .swiper-container {
-    width: 100%;
+    width: 90%;
     height: 450px;
     position: initial;
+    /* margin: 5px; */
 }
 
 .swiper-slide {
@@ -5391,8 +5397,8 @@ header {
 
 .border-wrap {
     border: 1px solid rgb(232, 232, 232);
-    background-color: whitesmoke;
-    padding: 19px;
+    background-color: white;
+    /* padding: 5px 0px; */
     margin: 15px 0px;
 }
 
@@ -5408,21 +5414,27 @@ header {
     /* margin-top: 40px; */
 }
 
+a .small-titl{
+    color:white;
+}
+
 .small-title {
-    /* background-color: #095197; */
+    background-color: #d12730;
     margin-bottom: 0px;
     /* padding: 20px 10px; */
-    color: #333;
+    color: #fff;
     margin-top: 0px;
     font-weight: bold;
     font-family: montserrat;
-    font-size: 20px;
+    font-size: 16px;
     position: relative;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #e3e3e3;
-    font-weight: 600;
-    margin: .83em 0;
+    /* padding-bottom: 10px; */
+    margin-bottom: 0px;
+    /* border-bottom: 1px solid #e3e3e3; */
+    font-weight: 500;
+    /* margin: .83em 0; */
     margin-top: 0px;
+    padding: 5px 5px;
 }
 
 .btn-#d12730 {
@@ -5487,4 +5499,17 @@ header .container {}
 
 .lightbox {
     top: 200px !important;
+}
+
+.service-wrap.large {
+    height: 236px;
+}
+
+.intro-banner{
+    background-size: cover;
+    display: block;
+    height: 179px;
+    background-position: center;
+    margin-top: 0px;
  
+ 
