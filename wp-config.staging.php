@@ -13,16 +13,16 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'ufs');
+define('DB_NAME', '180958-ufs');
 
 /** MySQL database username */
-define('DB_USER', 'b7eafaa9ff96');
+define('DB_USER', '180958_tm59364');
 
 /** MySQL database password */
 define('DB_PASSWORD', 'steel1992');
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'ufs-180958.mysql.binero.se');
 
 $table_prefix  = 'wp_';
 
