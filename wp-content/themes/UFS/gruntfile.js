@@ -31,9 +31,31 @@ module.exports = function(grunt) {
 
 				},
 
-				files: {
-					'css/style.css' : 'src/scss/application.scss'
-				}
+				files : [
+
+
+					{
+
+
+						src : ['**/*.scss', '!**/_*.scss'],
+
+
+						cwd : 'src/scss',
+
+
+						dest : 'css',
+
+
+						ext : '.css',
+
+
+						expand : true
+
+
+					}
+
+
+				],
 
 			},
 			build: {
@@ -42,11 +64,31 @@ module.exports = function(grunt) {
 					outputStyle: 'compressed'
 				},
 
-				files: {
+				files : [
 
-					'css/style.css' : 'src/scss/application.scss'
 
-				}
+					{
+
+
+						src : ['**/*.scss', '!**/_*.scss'],
+
+
+						cwd : 'src/scss',
+
+
+						dest : 'css',
+
+
+						ext : '.css',
+
+
+						expand : true
+
+
+					}
+
+
+				],
 			}
 		},
 
@@ -73,7 +115,7 @@ module.exports = function(grunt) {
 			},
 			css: {
 				files: ['src/scss/**/*.scss'],
-				tasks: ['sass:dev']
+				tasks: ['sass:dev','cssmin:dev']
 			}
 		},
 

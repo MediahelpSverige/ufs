@@ -31,7 +31,7 @@ get_header();
 			} // end if
 			?>
 		
-	<div class="">
+	<div class="margin-top">
 
 		<!--<h1 style="text-align:center;"><?php the_field('titel'); ?></h1>-->
 			<div class="welcome-wrap">
@@ -60,7 +60,7 @@ get_header();
 		<div class="border-wrap">
 		<h4 class="small-title">Följ oss på facebook</h4>
 			<div class="facebook-wrap">
-				<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fwww.ufs.nu%2F%3Ffref%3Dts&tabs=timeline&width=260&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=911661125591162" width="220" height="350" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+				<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fwww.ufs.nu%2F%3Ffref%3Dts&tabs=timeline&width=260&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=911661125591162" width="220" height="420" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 			</div>
 			</div>
 

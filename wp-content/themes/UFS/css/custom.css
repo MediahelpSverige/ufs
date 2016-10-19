@@ -581,6 +581,14 @@ section.section-white.single {
     overflow: auto;
 }
 
+form#searchform{
+    margin: 0px;
+}
+
+.searchbar input{
+    margin: 10px 0px;
+}
+
 .searchbar {
     display: inline-block;
     /* float: left; */
@@ -594,6 +602,10 @@ section.section-white.single {
 button#searchsubmit {
     border: none;
     background-color: rgba(128, 128, 128, 0);
+}
+
+.hej{
+    font-weight: bold;
 }
 
 .single h2 {
@@ -630,9 +642,7 @@ button#searchsubmit {
     width: 100%;
     border: none;
     border-radius: 4px;
-    margin: 20px 0px;
-    margin-top: 20px;
-    height: 41px;
+    height: 40px;
     padding: 0px 10px;
 }
 
@@ -3463,6 +3473,7 @@ button#searchsubmit {
     margin-top: 7px;
     margin-left: 20px;
     }
+    margin-top: 1;
 }
 
 .facebook-wrap {
@@ -3912,7 +3923,7 @@ body {
 .logo img {
     max-height: 120px;
     /* position: absolute;*/
-    margin: 20px 0px;
+    margin: 10px 0px;
     /* margin-bottom: 0px; */
 }
 
@@ -4166,7 +4177,7 @@ h4 {
 }
 
 #intro-text .small-title{
-    font-size: 20px;
+    font-size: 15px;
 }
 
 #intro-text p{
@@ -4185,7 +4196,7 @@ h4 {
     float: right;
     /* min-width: 468px; */
     /* width: 50%; */
-    margin: 20px 0 0 0;
+    margin: 10px 0 0 0;
 }
 
 .phone-manil ul {
@@ -4916,7 +4927,7 @@ section.welcome-section h3 {
 .searchbar i {
     position: absolute;
     right: 0px;
-    height: 41px;
+    height: 40px;
     top: 0px;
     /* margin: 10px 0px; */
     border-top-right-radius: 4px;
@@ -4930,7 +4941,7 @@ section.welcome-section h3 {
     /* left: 0; */
     padding: 11px 15px;
     position: absolute;
-    top: 10px;
+    /* top: 10px; */
 }
 
 .searchbar input {
@@ -4942,7 +4953,7 @@ section.welcome-section h3 {
 
 .service-wrap {
     /* padding: 50px 10px; */
-    height: 135px;
+    height: 127px;
     background-size: cover;
     background-position: center;
     background-color: black;
@@ -5030,6 +5041,10 @@ footer .kontakt {
     width: 60%;
     display: block;
     margin: auto;
+}
+
+.margin-top{
+margin-top: 30px;
 }
 
 .title {
@@ -5426,7 +5441,7 @@ a .small-titl{
     margin-top: 0px;
     font-weight: bold;
     font-family: montserrat;
-    font-size: 16px;
+    font-size: 15px;
     position: relative;
     /* padding-bottom: 10px; */
     margin-bottom: 0px;
@@ -5502,7 +5517,7 @@ header .container {}
 }
 
 .service-wrap.large {
-    height: 236px;
+    height: 290px;
 }
 
 .intro-banner{
