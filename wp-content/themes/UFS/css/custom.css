@@ -4184,7 +4184,7 @@ h4 {
 .phone-manil {
     float: right;
     /* min-width: 468px; */
-    width: 50%;
+    /* width: 50%; */
     margin: 20px 0 0 0;
 }
 

@@ -39,7 +39,7 @@ get_header();
 								<h4 class="small-title">Byggservice</h4>
 								<div class="service-wrap large" style="background-image:url('<?php bloginfo('url');?>/wp-content/uploads/2016/04/bygg-e1467271972766.jpg')">
 									<div class="image-wrap">
-										<img src="http://ufs.mediahelpcrm.se/wp-content/uploads/2016/09/bygg.png">
+										<img src="<?php bloginfo('url');?>/wp-content/themes/UFS/img/byggsevice.png">
 									</div></div>
 
 								</a>
@@ -56,7 +56,7 @@ get_header();
 	</div>
 
 
-		<div id="facebook-sb" class="col-md-3 col-sm-3">
+		<div id="facebook-sb" class="col-md-3 col-sm-6">
 		<div class="border-wrap">
 		<h4 class="small-title">Följ oss på facebook</h4>
 			<div class="facebook-wrap">
@@ -83,7 +83,7 @@ get_header();
 						</div>
 					</div>
 		</div>
-		<div id="facebook-sb" class="col-md-3 col-sm-3">
+		<div id="facebook-sb" class="col-md-3 col-sm-6">
 
 				
 							<div class="border-wrap">
@@ -92,7 +92,7 @@ get_header();
 									<h4 class="small-title">Fuktteknik</h4>
 									<div class="service-wrap" style="background-image:url('<?php bloginfo('url');?>/wp-content/uploads/2016/06/ref2_small.jpg')">
 										<div class="image-wrap">
-											<img src="http://ufs.mediahelpcrm.se/wp-content/uploads/2016/09/fuktt.png">
+											<img src="<?php bloginfo('url');?>/wp-content/themes/UFS/img/fukttektin.png">
 										</div>
 									</div>
 								</a>
@@ -102,7 +102,7 @@ get_header();
 								<h4 class="small-title">Riv & Sanering</h4>
 									<div class="service-wrap" style="background-image:url('<?php bloginfo('url') ?>/wp-content/uploads/2016/06/stationen.jpg')">
 										<div class="image-wrap">
-											<img src="http://ufs.mediahelpcrm.se/wp-content/uploads/2016/09/Asset-9.png">
+											<img src="<?php bloginfo('url');?>/wp-content/themes/UFS/img/rivosanering.png">
 										</div></div>
 									</a>
 								</div>
@@ -111,7 +111,7 @@ get_header();
 									<h4 class="small-title">Rörservice</h4>
 										<div class="service-wrap" style="background-image:url('<?php bloginfo('url') ?>/wp-content/uploads/2016/06/ror_small.jpg')">
 											<div class="image-wrap">
-												<img src="http://ufs.mediahelpcrm.se/wp-content/uploads/2016/09/Asset-4-1.png">
+												<img src="<?php bloginfo('url');?>/wp-content/themes/UFS/img/vvs.png">
 												
 											</div></div>
 										</a>
@@ -121,7 +121,7 @@ get_header();
 							<h4 class="small-title">Fastighetsjour</h4>
 								<div class="service-wrap" style="background-image:url('<?php bloginfo('url') ?>/wp-content/uploads/2016/08/brandkar.jpg')">
 									<div class="image-wrap">
-										<img style="width:85%;" src="http://ufs.mediahelpcrm.se/wp-content/uploads/2016/09/jour-slim.png">
+										<img style="width:85%;" src="<?php bloginfo('url');?>/wp-content/uploads/2016/09/jour-slim.png">
 									</div>
 								</div>
 							</a>
